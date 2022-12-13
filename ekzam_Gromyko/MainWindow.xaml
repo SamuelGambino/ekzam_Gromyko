@@ -1,0 +1,33 @@
+﻿<Window x:Class="ekzam_Gromyko.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ekzam_Gromyko"
+        mc:Ignorable="d"
+        Title="Главное меню" Height="450" Width="800" Background="#d7e7f5" FontFamily="Comic Sans MS" Foreground="#243238" Icon="/img/logo-smoll.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.ColumnSpan="3" Background="#4db2d8" Orientation="Horizontal">
+            <Image Grid.Column="1" Height="60" Width="60" Source="img/logo-full.png"/>
+            <TextBlock Grid.Column="2" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Text="Мои задачи"/>
+            <TextBlock Grid.Column="2" Margin="300,10,0,0" VerticalAlignment="Center" TextWrapping="Wrap" Text="Имя исполнителя:"/>
+            <TextBlock HorizontalAlignment="Left" x:Name="FullName" Margin="10,0,0,0" TextWrapping="Wrap" Background="#d7e7f5" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="#4db2d8" Orientation="Horizontal">
+            <TextBlock TextWrapping="Wrap" Text="Время до блокировки: " Margin="330 20 0 0" />
+            
+            <Button Width="150" Height="30" Content="Выход" Background="#f02a53" Foreground="White" Margin="170 0 0 0" Click="autorizateBtn"/>
+        </StackPanel>
+        <Frame x:Name="FrmMain" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

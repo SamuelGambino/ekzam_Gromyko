@@ -1,0 +1,28 @@
+﻿<Page x:Class="ekzam_Gromyko.Pages.ExecutorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ekzam_Gromyko.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExecutorPage">
+
+    <Grid Background="#d7e7f5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Задачи: " FontSize="18" Margin="0 6 0 0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" >
+            <DataGrid />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Width="150" Height="30" Content="Добавить задачу" Background="#f02a53" Foreground="White" Margin="0 0 0 0" Click="BtnAddTask"/>
+            <Button Width="150" Height="30" Content="Редактировать задачу" Background="#f02a53" Foreground="White" Margin="10 0 0 0" Click="BtnEditTask"/>
+        </StackPanel>
+    </Grid>
+</Page>
